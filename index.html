@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROF. SLIM Deutsch Zentrum - Plateforme Allemande</title>
+  <link rel="icon" href="assets/prof-slim-logo.jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" data-page-link="accueil" aria-label="PROF. SLIM">
+        <span class="brand-mark">
+          <img src="assets/prof-slim-logo.jpeg" alt="Logo PROF. SLIM Deutsch Zentrum">
+        </span>
+      </a>
+
+      <nav class="nav-list">
+        <a href="#accueil" data-page-link="accueil" data-roles="student" class="is-active" data-i18n="navHome">Accueil</a>
+        <a href="#cours" data-page-link="cours" data-roles="student" data-i18n="navCourses">Cours</a>
+        <a href="#classes" data-page-link="classes" data-roles="student" data-i18n="navClasses">Classes</a>
+        <a href="#test" data-page-link="test" data-roles="student" data-i18n="navTest">Test niveau</a>
+        <a href="#bibliothek" data-page-link="bibliothek" data-roles="student" data-i18n="navLibrary">Bibliothek</a>
+        <a href="#exercices" data-page-link="exercices" data-roles="student" data-i18n="navExercises">Exercices</a>
+        <a href="#enregistrement" data-page-link="enregistrement" data-roles="admin teacher" data-i18n="navRegisterCourse">Enregistrer cours</a>
+        <a href="#admin" data-page-link="admin" data-roles="admin" data-i18n="navAdmin">Admin</a>
+        <a href="#profil" data-page-link="profil" data-roles="student admin teacher" data-i18n="navProfile">Profil</a>
+      </nav>
+
+      <div class="sidebar-panel">
+        <span class="status-dot"></span>
+        <p id="sessionRoleLabel">Espace etudiant</p>
+        <strong id="activeLevelLabel">Niveau A1.1</strong>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-button" type="button" aria-label="Afficher le menu" id="menuButton">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div>
+          <p class="eyebrow" id="platformModeLabel">PROF. SLIM Deutsch Zentrum</p>
+          <h1 id="pageTitle">Apprendre l'allemand avec parcours clair</h1>
+        </div>
+        <div class="topbar-actions">
+          <label class="language-control">
+            <span data-i18n="languageLabel">Langue</span>
+            <select id="appLanguage" class="language-select" data-language-select>
+              <option value="fr">Francais</option>
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </label>
+          <button class="secondary-action" type="button" id="logoutButton" data-i18n="logout">Se deconnecter</button>
+        </div>
+      </header>
+
+      <section class="page" id="accueil" data-title="Apprendre l'allemand avec parcours clair" data-roles="student">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="hero-brand">
+              <img src="assets/prof-slim-logo.jpeg" alt="Logo PROF. SLIM Deutsch Zentrum">
+            </div>
+            <p class="eyebrow">Deutsch lernen</p>
+            <h2>La plateforme officielle PROF. SLIM pour cours, tests, livres et classes.</h2>
+            <p>Organisez l'apprentissage de A1.1 a B2.2 avec des parcours, exercices, ressources et suivi personnel dans une seule interface.</p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#cours" data-page-link="cours">Voir les cours</a>
+              <a class="secondary-action" href="#test" data-page-link="test">Passer le test</a>
+            </div>
+          </div>
+          <img src="assets/german-learning-hero.png" alt="Scene moderne d'apprentissage de l'allemand avec livres et tablette">
+        </div>
+
+        <div class="metrics-grid" aria-label="Statistiques plateforme">
+          <article>
+            <strong>8</strong>
+            <span>Classes A1.1 - B2.2</span>
+          </article>
+          <article>
+            <strong>42</strong>
+            <span>Lecons guidees</span>
+          </article>
+          <article>
+            <strong>120</strong>
+            <span>Exercices pratiques</span>
+          </article>
+          <article>
+            <strong>4</strong>
+            <span>Tests de niveau</span>
+          </article>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Parcours</p>
+            <h2>Structure proposee</h2>
+          </div>
+          <a class="text-link" href="#classes" data-page-link="classes">Voir les classes</a>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>Login et inscription</h3>
+            <p>Formulaires propres pour acceder rapidement a votre espace.</p>
+          </article>
+          <article>
+            <h3>Cours par niveau</h3>
+            <p>Chaque niveau contient grammaire, vocabulaire, audio, lecture et production ecrite.</p>
+          </article>
+          <article>
+            <h3>Bibliothek</h3>
+            <p>Livres, fiches PDF, audio, listes de mots et ressources culturelles.</p>
+          </article>
+          <article>
+            <h3>Suivi personnel</h3>
+            <p>Progression, exercices, examens et ressources de votre classe.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page auth-page is-visible" id="login" data-title="Connexion a la plateforme">
+        <div class="login-screen">
+          <div class="login-column">
+            <div class="login-card">
+              <div class="login-brand">
+                <img src="assets/prof-slim-logo.jpeg" alt="Logo PROF. SLIM Deutsch Zentrum">
+              </div>
+              <label class="language-control login-language">
+                <span data-i18n="languageLabel">Langue</span>
+                <select class="language-select" data-language-select>
+                  <option value="fr">Francais</option>
+                  <option value="en">English</option>
+                  <option value="de">Deutsch</option>
+                </select>
+              </label>
+              <div>
+                <p class="eyebrow">Connexion sécurisée</p>
+                <h2>Bienvenue sur PROF. SLIM</h2>
+                <p>Votre plateforme intelligente pour apprendre l’allemand de A1 à B2.</p>
+              </div>
+              <form class="form-grid login-form demo-form" data-success="Connexion demo reussie.">
+                <label>Email
+                  <span class="field-control email-field">
+                    <input type="email" placeholder="nom@email.com" required>
+                  </span>
+                </label>
+                <label>Mot de passe
+                  <span class="field-control password-field">
+                    <input type="password" placeholder="Votre mot de passe" required>
+                  </span>
+                </label>
+                <label>Role
+                  <span class="field-control role-field">
+                    <select id="loginRole">
+                      <option>Étudiant</option>
+                      <option>Professeur</option>
+                      <option>Admin</option>
+                    </select>
+                  </span>
+                </label>
+                <div class="login-options">
+                  <a href="#login">Mot de passe oublié ?</a>
+                  <a href="#inscription" data-page-link="inscription">Créer un compte</a>
+                </div>
+                <button class="primary-action login-submit" type="submit">Se connecter</button>
+                <p class="form-status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+
+          <div class="login-hero" aria-label="Presentation PROF. SLIM">
+            <span class="shape shape-black"></span>
+            <span class="shape shape-red"></span>
+            <span class="shape shape-gold"></span>
+            <div class="flag-ribbon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="hero-logo-panel">
+              <img src="assets/prof-slim-logo.jpeg" alt="Logo PROF. SLIM Deutsch Zentrum">
+            </div>
+            <div class="login-hero-copy">
+              <p class="eyebrow">German learning SaaS</p>
+              <h3>Apprenez, progressez et suivez chaque niveau avec précision.</h3>
+              <p>Un espace moderne pour gérer les cours, tests, bibliothek, exercices et classes de A1.1 à B2.2.</p>
+              <div class="hero-pills">
+                <span>A1 - A2</span>
+                <span>B1 - B2</span>
+                <span>Tests</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page auth-page" id="inscription" data-title="Creer un compte apprenant">
+        <div class="auth-card wide">
+          <div class="auth-logo">
+            <img src="assets/prof-slim-logo.jpeg" alt="Logo PROF. SLIM Deutsch Zentrum">
+          </div>
+          <div>
+            <p class="eyebrow">Nouveau compte</p>
+            <h2>Inscription</h2>
+            <p>Inscrivez-vous d'abord, puis la plateforme complete sera ouverte.</p>
+          </div>
+          <form class="form-grid two-columns demo-form" data-success="Compte demo cree avec succes.">
+            <label>Nom complet
+              <input type="text" placeholder="Votre nom" required>
+            </label>
+            <label>Email
+              <input type="email" placeholder="nom@email.com" required>
+            </label>
+            <label>Telephone
+              <input type="tel" placeholder="+212 6 00 00 00 00">
+            </label>
+            <label>Niveau souhaite
+              <select id="signupLevel">
+                <option>A1.1</option>
+                <option>A1.2</option>
+                <option>A2.1</option>
+                <option>A2.2</option>
+                <option>B1.1</option>
+                <option>B1.2</option>
+                <option>B2.1</option>
+                <option>B2.2</option>
+              </select>
+            </label>
+            <label>Mot de passe
+              <input type="password" placeholder="Creer un mot de passe" required>
+            </label>
+            <label>Profil
+              <select>
+                      <option>Étudiant</option>
+                <option>Enseignant</option>
+              </select>
+            </label>
+            <button class="primary-action" type="submit">Creer le compte</button>
+            <p class="form-status full-field" aria-live="polite"></p>
+          </form>
+          <p class="auth-switch">Deja inscrit ? <a href="#login" data-page-link="login">Se connecter</a></p>
+        </div>
+      </section>
+
+      <section class="page" id="cours" data-title="Catalogue des cours" data-roles="student">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Cours</p>
+            <h2>Programmes d'allemand</h2>
+          </div>
+          <select class="compact-select" id="courseFilter" aria-label="Filtrer par niveau">
+            <option value="all">Tous les niveaux</option>
+            <option>A1.1</option>
+            <option>A1.2</option>
+            <option>A2.1</option>
+            <option>A2.2</option>
+            <option>B1.1</option>
+            <option>B1.2</option>
+            <option>B2.1</option>
+            <option>B2.2</option>
+          </select>
+        </div>
+        <div class="course-grid" id="courseGrid"></div>
+      </section>
+
+      <section class="page" id="classes" data-title="Classes de A1 jusqu'a B2" data-roles="student">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Classes</p>
+            <h2>Acces aux classes par code admin</h2>
+          </div>
+        </div>
+        <div class="class-access-panel">
+          <div>
+            <p class="eyebrow">Code de classe</p>
+            <h3>Entrez le code donne par l'admin</h3>
+            <p>Chaque classe A1.1 jusqu'a B2.2 est ouverte uniquement avec son code d'acces.</p>
+          </div>
+          <form class="class-code-form" id="classCodeForm">
+            <label>Code
+              <input type="text" id="classCodeInput" placeholder="Ex: A11-2026" required>
+            </label>
+            <button class="primary-action" type="submit">Ouvrir la classe</button>
+            <p class="form-status" id="classCodeStatus" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="active-class-panel" id="activeClassPanel">
+          <span>Classe active</span>
+          <strong id="activeClassTitle">Aucune classe ouverte</strong>
+          <p id="activeClassDetails">Utilisez un code cree par l'admin pour afficher les informations de la classe.</p>
+        </div>
+        <div class="class-workspace" id="classWorkspace">
+          <div class="workspace-header">
+            <div>
+              <p class="eyebrow">Espace etudiant</p>
+              <h3 id="workspaceTitle">Votre espace de classe</h3>
+            </div>
+            <span class="badge open" id="workspaceCode">Code valide</span>
+          </div>
+          <div class="workspace-grid">
+            <article class="workspace-panel">
+              <div class="panel-title">
+                <span>Exercices</span>
+                <a href="#exercices" data-page-link="exercices">Voir tout</a>
+              </div>
+              <div class="workspace-list" id="classExerciseList"></div>
+            </article>
+            <article class="workspace-panel">
+              <div class="panel-title">
+                <span>Liens de cours</span>
+                <a href="#cours" data-page-link="cours">Cours</a>
+              </div>
+              <div class="workspace-list" id="classCourseList"></div>
+            </article>
+            <article class="workspace-panel">
+              <div class="panel-title">
+                <span>Examens</span>
+                <a href="#test" data-page-link="test">Passer test</a>
+              </div>
+              <div class="workspace-list" id="classExamList"></div>
+            </article>
+            <article class="workspace-panel">
+              <div class="panel-title">
+                <span>Suivi personnel</span>
+                <a href="#bibliothek" data-page-link="bibliothek">Ressources</a>
+              </div>
+              <div class="student-followup" id="studentFollowup"></div>
+            </article>
+          </div>
+        </div>
+        <div class="class-grid" id="levelGrid"></div>
+      </section>
+
+      <section class="page" id="test" data-title="Test de niveau allemand" data-roles="student">
+        <div class="test-layout">
+          <div class="test-panel">
+            <p class="eyebrow">Placement</p>
+            <h2>Test de niveau complet</h2>
+            <p>Evaluation PROF. SLIM en grammaire, vocabulaire, lecture, simulation audio, ecriture et oral.</p>
+            <form class="quiz" id="levelQuiz">
+              <div class="test-section">
+                <h3>Teil 1 - Grammatik <span>10 Punkte</span></h3>
+                <fieldset>
+                  <legend>1. Ich freue mich _____ deinen Besuch.</legend>
+                  <label><input type="radio" name="q1" value="1"> a) auf</label>
+                  <label><input type="radio" name="q1" value="0"> b) über</label>
+                  <label><input type="radio" name="q1" value="0"> c) für</label>
+                  <label><input type="radio" name="q1" value="0"> d) mit</label>
+                </fieldset>
+                <fieldset>
+                  <legend>2. Wenn ich mehr Zeit _____, würde ich Deutsch lernen.</legend>
+                  <label><input type="radio" name="q2" value="0"> a) habe</label>
+                  <label><input type="radio" name="q2" value="1"> b) hätte</label>
+                  <label><input type="radio" name="q2" value="0"> c) hatte</label>
+                  <label><input type="radio" name="q2" value="0"> d) haben</label>
+                </fieldset>
+                <fieldset>
+                  <legend>3. Gestern _____ ich den ganzen Tag gearbeitet.</legend>
+                  <label><input type="radio" name="q3" value="1"> a) habe</label>
+                  <label><input type="radio" name="q3" value="0"> b) bin</label>
+                  <label><input type="radio" name="q3" value="0"> c) werde</label>
+                  <label><input type="radio" name="q3" value="0"> d) hatte</label>
+                </fieldset>
+                <fieldset>
+                  <legend>4. Das ist der Mann, _____ Auto gestohlen wurde.</legend>
+                  <label><input type="radio" name="q4" value="1"> a) dessen</label>
+                  <label><input type="radio" name="q4" value="0"> b) deren</label>
+                  <label><input type="radio" name="q4" value="0"> c) dem</label>
+                  <label><input type="radio" name="q4" value="0"> d) den</label>
+                </fieldset>
+                <fieldset>
+                  <legend>5. Obwohl sie krank war, _____ sie zur Arbeit.</legend>
+                  <label><input type="radio" name="q5" value="1"> a) ging</label>
+                  <label><input type="radio" name="q5" value="0"> b) geht</label>
+                  <label><input type="radio" name="q5" value="0"> c) gegangen</label>
+                  <label><input type="radio" name="q5" value="0"> d) gehen</label>
+                </fieldset>
+                <fieldset>
+                  <legend>6. Er hat vergessen, die Tür _____.</legend>
+                  <label><input type="radio" name="q6" value="0"> a) schließen</label>
+                  <label><input type="radio" name="q6" value="0"> b) geschlossen</label>
+                  <label><input type="radio" name="q6" value="1"> c) zu schließen</label>
+                  <label><input type="radio" name="q6" value="0"> d) schließt</label>
+                </fieldset>
+                <fieldset>
+                  <legend>7. Welcher Satz ist richtig?</legend>
+                  <label><input type="radio" name="q7" value="0"> a) Ich interessiere Deutsch.</label>
+                  <label><input type="radio" name="q7" value="1"> b) Ich interessiere mich für Deutsch.</label>
+                  <label><input type="radio" name="q7" value="0"> c) Ich interessiere auf Deutsch.</label>
+                  <label><input type="radio" name="q7" value="0"> d) Ich interessiere mit Deutsch.</label>
+                </fieldset>
+                <fieldset>
+                  <legend>8. Die Prüfung war _____ als ich erwartet hatte.</legend>
+                  <label><input type="radio" name="q8" value="0"> a) schwierig</label>
+                  <label><input type="radio" name="q8" value="1"> b) schwieriger</label>
+                  <label><input type="radio" name="q8" value="0"> c) am schwierigsten</label>
+                  <label><input type="radio" name="q8" value="0"> d) schwierigeren</label>
+                </fieldset>
+                <fieldset>
+                  <legend>9. Seit zwei Jahren _____ ich in Rabat.</legend>
+                  <label><input type="radio" name="q9" value="1"> a) wohne</label>
+                  <label><input type="radio" name="q9" value="0"> b) wohnte</label>
+                  <label><input type="radio" name="q9" value="0"> c) habe gewohnt</label>
+                  <label><input type="radio" name="q9" value="0"> d) bin gewohnt</label>
+                </fieldset>
+                <fieldset>
+                  <legend>10. Er spricht so schnell, _____ ich ihn kaum verstehe.</legend>
+                  <label><input type="radio" name="q10" value="1"> a) dass</label>
+                  <label><input type="radio" name="q10" value="0"> b) weil</label>
+                  <label><input type="radio" name="q10" value="0"> c) wenn</label>
+                  <label><input type="radio" name="q10" value="0"> d) obwohl</label>
+                </fieldset>
+              </div>
+
+              <div class="test-section">
+                <h3>Teil 2 - Wortschatz <span>5 Punkte</span></h3>
+                <fieldset>
+                  <legend>11. "zuverlässig" bedeutet:</legend>
+                  <label><input type="radio" name="q11" value="0"> a) intelligent</label>
+                  <label><input type="radio" name="q11" value="1"> b) pünktlich und vertrauenswürdig</label>
+                  <label><input type="radio" name="q11" value="0"> c) laut</label>
+                  <label><input type="radio" name="q11" value="0"> d) traurig</label>
+                </fieldset>
+                <fieldset>
+                  <legend>12. Das Gegenteil von "billig"</legend>
+                  <label><input type="radio" name="q12" value="1"> a) teuer</label>
+                  <label><input type="radio" name="q12" value="0"> b) klein</label>
+                  <label><input type="radio" name="q12" value="0"> c) langsam</label>
+                  <label><input type="radio" name="q12" value="0"> d) neu</label>
+                </fieldset>
+                <fieldset>
+                  <legend>13. Welches Wort passt? Ich muss einen Termin beim _____ machen.</legend>
+                  <label><input type="radio" name="q13" value="1"> a) Arzt</label>
+                  <label><input type="radio" name="q13" value="0"> b) Auto</label>
+                  <label><input type="radio" name="q13" value="0"> c) Tisch</label>
+                  <label><input type="radio" name="q13" value="0"> d) Fenster</label>
+                </fieldset>
+                <fieldset>
+                  <legend>14. Welches Verb passt? Eine Prüfung _____</legend>
+                  <label><input type="radio" name="q14" value="1"> a) bestehen</label>
+                  <label><input type="radio" name="q14" value="0"> b) machen</label>
+                  <label><input type="radio" name="q14" value="0"> c) fahren</label>
+                  <label><input type="radio" name="q14" value="0"> d) tragen</label>
+                </fieldset>
+                <fieldset>
+                  <legend>15. "Lebenslauf" heißt auf Französisch</legend>
+                  <label><input type="radio" name="q15" value="0"> a) Passeport</label>
+                  <label><input type="radio" name="q15" value="1"> b) CV</label>
+                  <label><input type="radio" name="q15" value="0"> c) Lettre</label>
+                  <label><input type="radio" name="q15" value="0"> d) Contrat</label>
+                </fieldset>
+              </div>
+
+              <div class="test-section">
+                <h3>Teil 3 - Lesen <span>5 Punkte</span></h3>
+                <div class="reading-text">
+                  <strong>Text</strong>
+                  <p>Maria arbeitet seit drei Jahren als Krankenpflegerin in einem Krankenhaus in Berlin. Sie beginnt ihre Arbeit jeden Morgen um sieben Uhr. Obwohl die Arbeit manchmal stressig ist, liebt sie ihren Beruf, weil sie anderen Menschen helfen kann. In ihrer Freizeit lernt sie Spanisch und geht zweimal pro Woche schwimmen.</p>
+                </div>
+                <fieldset>
+                  <legend>16. Wo arbeitet Maria?</legend>
+                  <label><input type="radio" name="q16" value="0"> a) Schule</label>
+                  <label><input type="radio" name="q16" value="1"> b) Krankenhaus</label>
+                  <label><input type="radio" name="q16" value="0"> c) Universität</label>
+                  <label><input type="radio" name="q16" value="0"> d) Hotel</label>
+                </fieldset>
+                <fieldset>
+                  <legend>17. Seit wann arbeitet sie dort?</legend>
+                  <label><input type="radio" name="q17" value="0"> a) zwei Jahre</label>
+                  <label><input type="radio" name="q17" value="1"> b) drei Jahre</label>
+                  <label><input type="radio" name="q17" value="0"> c) vier Jahre</label>
+                  <label><input type="radio" name="q17" value="0"> d) fünf Jahre</label>
+                </fieldset>
+                <fieldset>
+                  <legend>18. Warum liebt sie ihren Beruf?</legend>
+                  <label><input type="radio" name="q18" value="0"> a) gutes Gehalt</label>
+                  <label><input type="radio" name="q18" value="0"> b) viele Ferien</label>
+                  <label><input type="radio" name="q18" value="1"> c) Menschen helfen</label>
+                  <label><input type="radio" name="q18" value="0"> d) kurze Arbeitszeit</label>
+                </fieldset>
+                <fieldset>
+                  <legend>19. Was macht sie in ihrer Freizeit?</legend>
+                  <label><input type="radio" name="q19" value="0"> a) Französisch lernen</label>
+                  <label><input type="radio" name="q19" value="0"> b) Tennis</label>
+                  <label><input type="radio" name="q19" value="1"> c) Spanisch lernen</label>
+                  <label><input type="radio" name="q19" value="0"> d) Fußball</label>
+                </fieldset>
+                <fieldset>
+                  <legend>20. Wie oft schwimmt sie?</legend>
+                  <label><input type="radio" name="q20" value="0"> a) jeden Tag</label>
+                  <label><input type="radio" name="q20" value="0"> b) einmal</label>
+                  <label><input type="radio" name="q20" value="1"> c) zweimal pro Woche</label>
+                  <label><input type="radio" name="q20" value="0"> d) nie</label>
+                </fieldset>
+              </div>
+
+              <div class="test-section">
+                <h3>Teil 4 - Hörverstehen <span>Simulation - 5 Punkte</span></h3>
+                <div class="audio-test-card">
+                  <div>
+                    <strong>Audio B1 - Hören</strong>
+                    <p>Ecoutez l'audio, puis repondez aux questions 21 a 25.</p>
+                  </div>
+                  <audio controls preload="metadata">
+                    <source src="assets/deutsch-b1-listening-audio.mp3" type="audio/mpeg">
+                    Votre navigateur ne supporte pas le lecteur audio.
+                  </audio>
+                </div>
+                <fieldset>
+                  <legend>21. Wo möchte der Mann hin?</legend>
+                  <label><input type="radio" name="q21" value="1"> a) Bahnhof</label>
+                  <label><input type="radio" name="q21" value="0"> b) Flughafen</label>
+                  <label><input type="radio" name="q21" value="0"> c) Supermarkt</label>
+                  <label><input type="radio" name="q21" value="0"> d) Hotel</label>
+                </fieldset>
+                <fieldset>
+                  <legend>22. Wann fährt der Zug?</legend>
+                  <label><input type="radio" name="q22" value="0"> a) 8:30</label>
+                  <label><input type="radio" name="q22" value="1"> b) 9:15</label>
+                  <label><input type="radio" name="q22" value="0"> c) 10:00</label>
+                  <label><input type="radio" name="q22" value="0"> d) 11:30</label>
+                </fieldset>
+                <fieldset>
+                  <legend>23. Wie bezahlt er?</legend>
+                  <label><input type="radio" name="q23" value="0"> a) bar</label>
+                  <label><input type="radio" name="q23" value="1"> b) Karte</label>
+                  <label><input type="radio" name="q23" value="0"> c) Handy</label>
+                  <label><input type="radio" name="q23" value="0"> d) Gutschein</label>
+                </fieldset>
+                <fieldset>
+                  <legend>24. Welche Information fehlt?</legend>
+                  <label><input type="radio" name="q24" value="0"> a) Name</label>
+                  <label><input type="radio" name="q24" value="0"> b) Adresse</label>
+                  <label><input type="radio" name="q24" value="1"> c) Telefonnummer</label>
+                  <label><input type="radio" name="q24" value="0"> d) Alter</label>
+                </fieldset>
+                <fieldset>
+                  <legend>25. Was soll der Mann mitbringen?</legend>
+                  <label><input type="radio" name="q25" value="0"> a) Reisepass</label>
+                  <label><input type="radio" name="q25" value="0"> b) Ticket</label>
+                  <label><input type="radio" name="q25" value="1"> c) Ausweis</label>
+                  <label><input type="radio" name="q25" value="0"> d) Geld</label>
+                </fieldset>
+              </div>
+
+              <div class="test-section">
+                <h3>Teil 5 - Schreiben <span>2 Punkte</span></h3>
+                <div class="writing-task">
+                  <strong>Aufgabe</strong>
+                  <p>Schreiben Sie eine E-Mail (80-100 Wörter). Sie möchten einen Deutschkurs besuchen.</p>
+                  <ul>
+                    <li>Warum möchten Sie Deutsch lernen?</li>
+                    <li>Welches Niveau haben Sie?</li>
+                    <li>Wann können Sie den Kurs besuchen?</li>
+                    <li>Stellen Sie zwei Fragen.</li>
+                  </ul>
+                </div>
+                <label class="writing-answer">Votre réponse
+                  <textarea rows="7" placeholder="Schreiben Sie hier Ihre E-Mail..."></textarea>
+                </label>
+              </div>
+
+              <div class="test-section">
+                <h3>Teil 6 - Sprechen <span>3 Punkte</span></h3>
+                <div class="speaking-grid">
+                  <article>
+                    <strong>Thema 1</strong>
+                    <p>Stellen Sie sich vor.</p>
+                  </article>
+                  <article>
+                    <strong>Thema 2</strong>
+                    <p>Warum möchten Sie in Deutschland leben oder arbeiten?</p>
+                  </article>
+                  <article>
+                    <strong>Thema 3</strong>
+                    <p>Beschreiben Sie Ihr Traumhaus oder Ihren Traumberuf.</p>
+                  </article>
+                </div>
+              </div>
+              <button class="primary-action" type="submit">Voir resultat</button>
+            </form>
+          </div>
+          <aside class="result-panel">
+            <span>Resultat</span>
+            <strong id="quizResult">En attente</strong>
+            <p id="quizAdvice">Repondez aux 25 questions automatiques pour afficher le niveau conseille.</p>
+            <div class="score-list">
+              <p>QCM: 25 points</p>
+              <p>Ecriture: 2 points</p>
+              <p>Oral: 3 points</p>
+              <p>Total possible: 30 points</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" id="bibliothek" data-title="Bibliothek et ressources" data-roles="student">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Bibliothek</p>
+            <h2>Bibliotheque PDF</h2>
+            <p>Fichiers installes dans la plateforme avec acces pour ouvrir ou telecharger.</p>
+          </div>
+        </div>
+        <div class="library-grid">
+          <article class="library-card">
+            <span class="badge level">B1 Lesen</span>
+            <h3>Deutsch B1 Reading Aufgabenblatt</h3>
+            <p>Fiche d'exercices de lecture B1 pour entrainement et evaluation.</p>
+            <div class="library-meta">
+              <span>PDF</span>
+              <span>36 KB</span>
+            </div>
+            <div class="library-actions">
+              <a class="resource-link pdf-link" href="assets/library/deutsch-b1-reading-aufgabenblatt.pdf" target="_blank" rel="noopener">Ouvrir</a>
+              <a class="resource-link download-link" href="assets/library/deutsch-b1-reading-aufgabenblatt.pdf" download>Telecharger</a>
+            </div>
+          </article>
+          <article class="library-card">
+            <span class="badge level">B1 Lesen</span>
+            <h3>Deutsch B1 Reading Aufgabenblatt 1</h3>
+            <p>Deuxieme version du fichier d'exercices de lecture B1.</p>
+            <div class="library-meta">
+              <span>PDF</span>
+              <span>36 KB</span>
+            </div>
+            <div class="library-actions">
+              <a class="resource-link pdf-link" href="assets/library/deutsch-b1-reading-aufgabenblatt-1.pdf" target="_blank" rel="noopener">Ouvrir</a>
+              <a class="resource-link download-link" href="assets/library/deutsch-b1-reading-aufgabenblatt-1.pdf" download>Telecharger</a>
+            </div>
+          </article>
+          <article class="library-card">
+            <span class="badge level">B1 Correction</span>
+            <h3>Deutsch B1 Reading Losungsschlussel</h3>
+            <p>Corrige et solution key pour les exercices de lecture B1.</p>
+            <div class="library-meta">
+              <span>PDF</span>
+              <span>595 KB</span>
+            </div>
+            <div class="library-actions">
+              <a class="resource-link pdf-link" href="assets/library/deutsch-b1-reading-losungsschlussel.pdf" target="_blank" rel="noopener">Ouvrir</a>
+              <a class="resource-link download-link" href="assets/library/deutsch-b1-reading-losungsschlussel.pdf" download>Telecharger</a>
+            </div>
+          </article>
+          <article class="library-card">
+            <span class="badge level">B1 Correction</span>
+            <h3>Deutsch B1 Reading Losungsschlussel 1</h3>
+            <p>Version supplementaire du corrige pour les exercices B1 Reading.</p>
+            <div class="library-meta">
+              <span>PDF</span>
+              <span>110 KB</span>
+            </div>
+            <div class="library-actions">
+              <a class="resource-link pdf-link" href="assets/library/deutsch-b1-reading-losungsschlussel-1.pdf" target="_blank" rel="noopener">Ouvrir</a>
+              <a class="resource-link download-link" href="assets/library/deutsch-b1-reading-losungsschlussel-1.pdf" download>Telecharger</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="exercices" data-title="Exercices par competence" data-roles="student">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Pratique</p>
+            <h2>Exercices donnes par le professeur</h2>
+            <p>Les exercices publies par le prof apparaissent ici avec acces pour ouvrir ou telecharger.</p>
+          </div>
+        </div>
+        <div class="exercise-toolbar">
+          <span class="badge level">Travail a faire</span>
+          <span id="exerciseCountLabel">0 exercice</span>
+        </div>
+        <div class="exercise-grid" id="exerciseGrid"></div>
+      </section>
+
+      <section class="page" id="enregistrement" data-title="Enregistrement de cours" data-roles="admin teacher">
+        <div class="auth-card wide">
+          <div>
+            <p class="eyebrow">Creation</p>
+            <h2>Page d'enregistrement de cours</h2>
+            <p>Ajoutez un cours avec son niveau, son enseignant et ses ressources.</p>
+          </div>
+          <form class="form-grid two-columns" id="courseForm">
+            <label>Titre du cours
+              <input type="text" id="newCourseTitle" placeholder="Ex: Conversation A2.1" required>
+            </label>
+            <label>Niveau
+              <select id="newCourseLevel">
+                <option>A1.1</option>
+                <option>A1.2</option>
+                <option>A2.1</option>
+                <option>A2.2</option>
+                <option>B1.1</option>
+                <option>B1.2</option>
+                <option>B2.1</option>
+                <option>B2.2</option>
+              </select>
+            </label>
+            <label>Enseignant
+              <input type="text" id="newCourseTeacher" placeholder="Nom de l'enseignant">
+            </label>
+            <label>Duree
+              <input type="text" id="newCourseDuration" placeholder="Ex: 6 semaines">
+            </label>
+            <label>PDF du cours
+              <input type="text" id="newCoursePdf" placeholder="Lien PDF ou chemin du fichier">
+            </label>
+            <label>Lien YouTube
+              <input type="url" id="newCourseYoutube" placeholder="https://youtube.com/...">
+            </label>
+            <label class="full-field">Description
+              <textarea id="newCourseDescription" rows="4" placeholder="Objectifs, competences, supports..."></textarea>
+            </label>
+            <button class="primary-action" type="submit">Enregistrer</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="page" id="admin" data-title="Tableau de bord administrateur" data-roles="admin">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Administration</p>
+            <h2>Page d'admin</h2>
+          </div>
+        </div>
+        <div class="admin-grid">
+          <article>
+            <span>Etudiants</span>
+            <strong>286</strong>
+            <p>47 nouveaux ce mois</p>
+          </article>
+          <article>
+            <span>Enseignants</span>
+            <strong>12</strong>
+            <p>8 classes actives</p>
+          </article>
+          <article>
+            <span>Cours</span>
+            <strong id="adminCourseCount">42</strong>
+            <p>Catalogue publie</p>
+          </article>
+          <article>
+            <span>Classes</span>
+            <strong id="adminClassCount">8</strong>
+            <p>Codes actifs</p>
+          </article>
+          <article>
+            <span>Tests</span>
+            <strong>94</strong>
+            <p>Passes cette semaine</p>
+          </article>
+        </div>
+        <div class="admin-class-manager">
+          <div>
+            <p class="eyebrow">Gestion classes</p>
+            <h3>Creer un code de classe</h3>
+            <p>L'admin ecrit un code unique. Les etudiants utilisent ce code dans la page Classes pour entrer.</p>
+          </div>
+          <form class="form-grid two-columns" id="adminClassForm">
+            <label>Niveau
+              <select id="adminClassLevel">
+                <option>A1.1</option>
+                <option>A1.2</option>
+                <option>A2.1</option>
+                <option>A2.2</option>
+                <option>B1.1</option>
+                <option>B1.2</option>
+                <option>B2.1</option>
+                <option>B2.2</option>
+              </select>
+            </label>
+            <label>Code classe
+              <input type="text" id="adminClassCode" placeholder="Ex: B12-SLIM" required>
+            </label>
+            <label>Enseignant
+              <input type="text" id="adminClassTeacher" placeholder="Nom du professeur">
+            </label>
+            <label>Horaire
+              <input type="text" id="adminClassSchedule" placeholder="Ex: Samedi 10:00">
+            </label>
+            <label class="full-field">Objectif
+              <input type="text" id="adminClassGoal" placeholder="Ex: Preparation test B1">
+            </label>
+            <button class="primary-action" type="submit">Enregistrer le code</button>
+            <p class="form-status full-field" id="adminClassStatus" aria-live="polite"></p>
+          </form>
+          <div class="admin-class-list" id="adminClassList" aria-label="Codes classes crees par admin"></div>
+        </div>
+        <div class="admin-class-manager">
+          <div>
+            <p class="eyebrow">Gestion exercices</p>
+            <h3>Publier un exercice</h3>
+            <p>Le professeur ajoute un exercice avec son fichier PDF ou lien. Les etudiants peuvent ensuite le telecharger.</p>
+          </div>
+          <form class="form-grid two-columns" id="adminExerciseForm">
+            <label>Titre
+              <input type="text" id="adminExerciseTitle" placeholder="Ex: Lesen B1 - Aufgabe 1" required>
+            </label>
+            <label>Type
+              <select id="adminExerciseCategory">
+                <option value="Exercice">Exercice</option>
+                <option value="Astuce">Astuce</option>
+              </select>
+            </label>
+            <label>Niveau
+              <select id="adminExerciseLevel">
+                <option>A1.1</option>
+                <option>A1.2</option>
+                <option>A2.1</option>
+                <option>A2.2</option>
+                <option>B1.1</option>
+                <option>B1.2</option>
+                <option>B2.1</option>
+                <option>B2.2</option>
+              </select>
+            </label>
+            <label>Professeur
+              <input type="text" id="adminExerciseTeacher" placeholder="Nom du professeur">
+            </label>
+            <label>Date limite
+              <input type="text" id="adminExerciseDeadline" placeholder="Ex: Vendredi 18:00">
+            </label>
+            <label class="full-field">Ajouter PDF depuis l'ordinateur
+              <input type="file" id="adminExerciseUpload" accept="application/pdf,.pdf">
+            </label>
+            <label class="full-field">Fichier PDF ou lien
+              <input type="text" id="adminExerciseFile" placeholder="assets/library/exercice.pdf ou https://...">
+            </label>
+            <label class="full-field">Consigne
+              <input type="text" id="adminExerciseInstruction" placeholder="Ex: Lire le texte et repondre aux questions.">
+            </label>
+            <button class="primary-action" type="submit">Publier l'exercice</button>
+            <p class="form-status full-field" id="adminExerciseStatus" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="resource-table admin-table">
+          <div class="table-row table-head">
+            <span>Utilisateur</span>
+            <span>Role</span>
+            <span>Niveau</span>
+            <span>Action</span>
+          </div>
+          <div class="table-row">
+            <span>Amine El Fassi</span>
+            <span>Etudiant</span>
+            <span>A1.2</span>
+            <button type="button">Voir</button>
+          </div>
+          <div class="table-row">
+            <span>Sarah Becker</span>
+            <span>Enseignante</span>
+            <span>B1.1</span>
+            <button type="button">Voir</button>
+          </div>
+          <div class="table-row">
+            <span>Nadia Karim</span>
+            <span>Etudiante</span>
+            <span>B2.1</span>
+            <button type="button">Voir</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="profil" data-title="Profil" data-roles="student admin teacher">
+        <div class="profile-layout">
+          <article class="profile-card">
+            <div class="profile-avatar">
+              <img src="assets/prof-slim-logo.jpeg" alt="Logo PROF. SLIM Deutsch Zentrum">
+            </div>
+            <div>
+              <p class="eyebrow" data-i18n="profileEyebrow">Profil</p>
+              <h2 id="profileName">Utilisateur PROF. SLIM</h2>
+              <p id="profileSummary">Informations personnelles et preferences de l'espace.</p>
+            </div>
+          </article>
+          <article class="profile-panel">
+            <div class="section-heading compact">
+              <div>
+                <p class="eyebrow" data-i18n="profileDetailsEyebrow">Compte</p>
+                <h2 data-i18n="profileDetailsTitle">Informations du profil</h2>
+              </div>
+            </div>
+            <form class="form-grid two-columns" id="profileForm">
+              <label><span data-i18n="profileFullName">Nom complet</span>
+                <input type="text" id="profileFullName" placeholder="Votre nom">
+              </label>
+              <label><span>Email</span>
+                <input type="email" id="profileEmail" placeholder="nom@email.com">
+              </label>
+              <label><span data-i18n="profileRole">Role</span>
+                <input type="text" id="profileRole" readonly>
+              </label>
+              <label><span data-i18n="profileLevel">Niveau</span>
+                <select id="profileLevel">
+                  <option>A1.1</option>
+                  <option>A1.2</option>
+                  <option>A2.1</option>
+                  <option>A2.2</option>
+                  <option>B1.1</option>
+                  <option>B1.2</option>
+                  <option>B2.1</option>
+                  <option>B2.2</option>
+                </select>
+              </label>
+              <label class="full-field"><span data-i18n="profileLanguage">Langue de l'interface</span>
+                <select id="profileLanguage" class="language-select" data-language-select>
+                  <option value="fr">Francais</option>
+                  <option value="en">English</option>
+                  <option value="de">Deutsch</option>
+                </select>
+              </label>
+              <button class="primary-action" type="submit" data-i18n="profileSave">Enregistrer le profil</button>
+              <p class="form-status full-field" id="profileStatus" aria-live="polite"></p>
+            </form>
+          </article>
+          <article class="profile-panel">
+            <p class="eyebrow" data-i18n="profileAccessEyebrow">Acces</p>
+            <h3 data-i18n="profileAccessTitle">Interface active</h3>
+            <div class="access-list" id="profileAccessList"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
